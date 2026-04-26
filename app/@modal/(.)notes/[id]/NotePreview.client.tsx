@@ -6,7 +6,9 @@ import Modal from '@/components/Modal/Modal';
 import { fetchNoteById } from '@/lib/api';
 import css from '@/components/NotePreview/NotePreview.module.css';
 
-function NotePreviewClient() {
+interface NotePreviewClientProps {}
+
+function NotePreviewClient({}: NotePreviewClientProps) {
   const router = useRouter();
   const { id } = useParams<{ id: string }>();
 
@@ -17,6 +19,7 @@ function NotePreviewClient() {
   } = useQuery({
     queryKey: ['note', id],
     queryFn: () => fetchNoteById(id),
+    refetchOnMount: false,
   });
 
   return (
