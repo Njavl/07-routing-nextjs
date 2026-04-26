@@ -3,6 +3,7 @@
 review*
 CLAUDE.md
 AGENTS.md
+requirements.txt
 
 # dependencies
 /node_modules

@@ -8,7 +8,7 @@ import NoteList from '@/components/NoteList/NoteList';
 import Pagination from '@/components/Pagination/Pagination';
 import css from '../../../notes/notes.module.css';
 
-function FilteredNotesClient() {
+function NotesClient() {
   const { slug } = useParams<{ slug: string[] }>();
   const [page, setPage] = useState(1);
 
@@ -45,4 +45,4 @@ function FilteredNotesClient() {
   );
 }
 
-export default FilteredNotesClient;
+export default NotesClient;
